@@ -1,0 +1,3 @@
+# Where I am
+
+- Up to the refactor bit of Structs...

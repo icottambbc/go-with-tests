@@ -5,18 +5,26 @@ import "testing"
 func TestMain(t *testing.T) {
 
 	t.Run("say hello to someone", func(t *testing.T) {
-		got := Hello("Chris")
+		got := Hello("Chris", "")
 		want := "Hello, Chris"
 
 		assetCorrectMessage(t, got, want)
 	})
 
 	t.Run("say hello to the world", func(t *testing.T) {
-		got := Hello("")
+		got := Hello("", "")
 		want := "Hello, World"
 
 		assetCorrectMessage(t, got, want)
 	})
+
+	t.Run("in Spanish", func(t *testing.T) {
+		got := Hello("Elodie", "Spanish")
+		want := "Hola, Elodie"
+
+		assetCorrectMessage(t, got, want)
+	})
+
 }
 
 func assetCorrectMessage(t testing.TB, got, want string) {
